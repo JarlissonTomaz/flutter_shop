@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/components/product_item.dart';
 import 'package:flutter_shop/data/dummy_data.dart';
 import 'package:flutter_shop/models/product.dart';
 
@@ -25,7 +26,9 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
-        itemBuilder: (context, i) => Text(LoadedProducts[i].title),
+        itemBuilder: (context, i) => ProductItem(
+          product: LoadedProducts[i],
+        ),
       ),
     );
   }
